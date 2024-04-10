@@ -5,7 +5,7 @@ let roundsPlayed = 0;
 
 
 function computerPlay() {
-    const actions = ['rock', 'paper', 'scissors'];
+    const actions = ['Pierre', 'Feuille', 'Ciseaux'];
     return actions[Math.floor(Math.random() * actions.length)];
 }
 
@@ -14,10 +14,10 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "Égalité !";
     } else if (
-        (playerSelection === 'rock' && computerSelection === 'scissors') ||
-        (playerSelection === 'paper' && computerSelection === 'rock') ||
-        (playerSelection === 'scissors' && computerSelection === 'paper')
-    ) {
+        (playerSelection === 'Pierre' && computerSelection === 'Ciseaux') ||
+        (playerSelection === 'Feuille' && computerSelection === 'Pierre') ||
+        (playerSelection === 'Ciseaux' && computerSelection === 'Feuille')
+     ) {
         playerWins++;
         return "Vous avez gagné cette manche !";
     } else {
@@ -45,6 +45,7 @@ function game(playerSelection) {
     updateResult(roundResult);
     roundsPlayed++;
     updateScore();
+    console.log(computerSelection)
 }
 
 
@@ -53,6 +54,8 @@ const choices = ['Pierre', 'Feuille', 'Ciseaux'];
 choices.forEach(choice => {
     const button = document.createElement('button');
     button.textContent = choice;
-    button.addEventListener('click', () => game(choice.toLowerCase()));
+    button.addEventListener('click', function() {
+        game(choice.toLowerCase())
+    } );
     gameDiv.appendChild(button);
 });
