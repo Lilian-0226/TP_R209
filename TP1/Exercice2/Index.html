@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulaire de contact</h1>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="pseudo">Pseudo:</label>
+            <input type="text" id="pseudo" name="pseudo" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="objet">Objet du message:</label>
+            <select id="objet" name="objet" required>
+                <option value="question">J'ai une question</option>
+                <option value="suggestion">Je fais une suggestion</option>
+                <option value="probleme">Je rencontre un problème</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+        <div class="form-group" id="message">
+            <label for="message">Votre message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="urgence">Niveau d'urgence</label>
+            <select id="urgence" name="urgence">
+                <option value="urgent">Urgent</option>
+                <option value="normal">Normal</option>
+                <option value="lent">Lent</option>
+            </select>
+        </div>
+        <div class="form-group" id="politique">
+            <input type="checkbox" id="confidentialite" name="confidentialite" required> 
+            <label for="confidentialite">J'accepte la <a href="https://policies.google.com/privacy?hl=fr-CA" target="_blank">politique de confidentialité</a></label>
+        </div>
+        <div id="button">
+            <button type="submit">Envoyer</button>
+        </div>
+    </form>
+</body>
+</html>

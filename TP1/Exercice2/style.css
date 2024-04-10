@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #3a2f2f;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    place-items: center;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #pseudo, #password, #email{
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #ed033e;
+  }
+  
+  form{
+    margin: auto;
+    width: 800px;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  h1{
+    color: white;
+    text-align: center;
+  }
+  
+  #message{
+    width: 100%;
+  }
+
+  #button, #politique{
+    text-align: center;
+  }
